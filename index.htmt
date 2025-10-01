@@ -59,7 +59,7 @@
         #continue-button {
             padding: 15px 30px;
             font-size: 20px;
-            background-color: #4267B2;
+            background-color: #4267B2; /* لون أزرق */
             color: white;
             border: none;
             border-radius: 5px;
@@ -84,7 +84,7 @@
     </video>
 
     <div id="video-overlay">
-        <a id="continue-button" href="https://www.facebook.com/your-page-link" target="_blank">
+        <a id="continue-button" href="https://youcefcheria.github.io/Youcef/" target="_blank">
             شاهد الباقي على فيسبوك
         </a>
     </div>
@@ -96,8 +96,8 @@
 
     const stopTime = 5; // يتوقف الفيديو بعد 5 ثواني
     
-    // **** يرجى تغيير رابط فيسبوك هنا أيضاً ****
-    const destinationURL = "https://www.facebook.com/your-page-link"; 
+    // **** تم دمج رابط الوجهة الجديد هنا ****
+    const destinationURL = "https://youcefcheria.github.io/Youcef/"; 
 
     video.play().catch(error => {
         console.log("التشغيل التلقائي قد يكون محظورًا.");
