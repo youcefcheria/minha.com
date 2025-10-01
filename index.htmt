@@ -6,19 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta property="og:type" content="video.other" />
-    
-    <meta property="og:url" content="https://youceffarsi.wuaze.com/" />
-    
+    <meta property="og:url" content="https://youcefchergui.github.io/minha.com/" /> 
     <meta property="og:title" content="🔥 لن تصدق ما يحدث بعد 5 ثواني! شاهد الآن!" />
     <meta property="og:description" content="اضغط للتشغيل والمتابعة على فيسبوك." />
-
-    <meta property="og:image" content="https://youceffarsi.wuaze.com/preview.jpg" />
+    <meta property="og:image" content="https://youcefarsi.wuaze.com/preview.jpg" /> 
     
-    <meta property="og:video:url" content="https://youceffarsi.wuaze.com/SnapInsta.to_AQNy053nmvIds0odpnJ98Z3mdcEtQ6yxkcMmEfyNag4JkvWaLHzVX5bGakfFuDjYFbPBOEbZjT8UtnKYP5OXTm9Ke63v6HhyGk_SIT0.mp4" />
-
+    <meta property="og:video:url" content="https://github.com/youcefchergui/minha.com/raw/refs/heads/main/SnapInsta.to_AQNy053nmvIds0odpnJ98Z3mdcEtQ6yxkcMmEfyNag4JkvWaLHzVX5bGakfFuDjYFbPBOEbZjT8UtnKYP5OXTm9Ke63v6HhyGk_SIT0.mp4" /> 
+    
     <meta property="og:video:type" content="video/mp4" />
     <meta property="og:video:width" content="1280" />
     <meta property="og:video:height" content="720" />
+    
     <style>
         body, html {
             margin: 0;
@@ -26,7 +24,7 @@
             background-color: #000;
             display: flex;
             justify-content: center;
-            align-items: flex-start; 
+            align-items: center; 
             min-height: 100vh;
         }
         
@@ -49,7 +47,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            display: none;
+            display: none; 
             justify-content: center;
             align-items: center;
             background-color: rgba(0, 0, 0, 0.9);
@@ -69,6 +67,11 @@
             text-decoration: none;
             font-weight: bold;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        #continue-button:hover {
+            background-color: #365899;
         }
     </style>
 </head>
@@ -76,12 +79,12 @@
 
 <div class="video-container">
     <video id="myVideo" controls preload="auto" playsinline>
-        <source src="SnapInsta.to_AQNy053nmvIds0odpnJ98Z3mdcEtQ6yxkcMmEfyNag4JkvWaLHzVX5bGakfFuDjYFbPBOEbZjT8UtnKYP5OXTm9Ke63v6HhyGk_SIT0.mp4" type="video/mp4">
+        <source src="https://github.com/youcefchergui/minha.com/raw/refs/heads/main/SnapInsta.to_AQNy053nmvIds0odpnJ98Z3mdcEtQ6yxkcMmEfyNag4JkvWaLHzVX5bGakfFuDjYFbPBOEbZjT8UtnKYP5OXTm9Ke63v6HhyGk_SIT0.mp4" type="video/mp4">
         متصفحك لا يدعم وسم الفيديو.
     </video>
 
     <div id="video-overlay">
-        <a id="continue-button" href="https://www.facebook.com/YourActualPageLink" target="_blank">
+        <a id="continue-button" href="https://www.facebook.com/your-page-link" target="_blank">
             شاهد الباقي على فيسبوك
         </a>
     </div>
@@ -91,9 +94,10 @@
     const video = document.getElementById('myVideo');
     const overlay = document.getElementById('video-overlay');
 
-    const stopTime = 5; 
+    const stopTime = 5; // يتوقف الفيديو بعد 5 ثواني
     
-    // *** 4. يجب استبدال الرابط برابط صفحتك على فيسبوك هنا أيضاً *** const destinationURL = "https://www.facebook.com/YourActualPageLink"; 
+    // **** يرجى تغيير رابط فيسبوك هنا أيضاً ****
+    const destinationURL = "https://www.facebook.com/your-page-link"; 
 
     video.play().catch(error => {
         console.log("التشغيل التلقائي قد يكون محظورًا.");
@@ -102,7 +106,7 @@
     video.addEventListener('timeupdate', function() {
         if (video.currentTime >= stopTime) {
             video.pause();
-            overlay.style.display = 'flex'; 
+            overlay.style.display = 'flex';
             video.removeEventListener('timeupdate', arguments.callee);
         }
     });
