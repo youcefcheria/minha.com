@@ -4,19 +4,6 @@
     <meta charset="UTF-8">
     <title>شاهد الآن: فيديو حصري</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta property="og:type" content="video.other" />
-    <meta property="og:url" content="https://youcefchergui.github.io/minha.com/" /> 
-    <meta property="og:title" content="🔥 لن تصدق ما يحدث بعد 5 ثواني! شاهد الآن!" />
-    <meta property="og:description" content="اضغط للتشغيل والمتابعة على فيسبوك." />
-    <meta property="og:image" content="https://youcefarsi.wuaze.com/preview.jpg" /> 
-    
-    <meta property="og:video:url" content="https://github.com/youcefchergui/minha.com/raw/refs/heads/main/SnapInsta.to_AQNy053nmvIds0odpnJ98Z3mdcEtQ6yxkcMmEfyNag4JkvWaLHzVX5bGakfFuDjYFbPBOEbZjT8UtnKYP5OXTm9Ke63v6HhyGk_SIT0.mp4" /> 
-    
-    <meta property="og:video:type" content="video/mp4" />
-    <meta property="og:video:width" content="1280" />
-    <meta property="og:video:height" content="720" />
-    
     <style>
         body, html {
             margin: 0;
@@ -32,12 +19,12 @@
             position: relative;
             width: 100%; 
             max-width: 1000px; 
-            margin: auto;
+            aspect-ratio: 16 / 9; /* للحفاظ على نسبة العرض 16:9 */
         }
 
-        #myVideo {
+        #youtube-iframe {
             width: 100%;
-            height: auto;
+            height: 100%;
             display: block;
         }
         
@@ -47,7 +34,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            display: none; 
+            display: none; /* مخفي مبدئياً */
             justify-content: center;
             align-items: center;
             background-color: rgba(0, 0, 0, 0.9);
@@ -67,51 +54,39 @@
             text-decoration: none;
             font-weight: bold;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s;
-        }
-
-        #continue-button:hover {
-            background-color: #365899;
         }
     </style>
 </head>
 <body>
 
 <div class="video-container">
-    <video id="myVideo" controls preload="auto" playsinline>
-        <source src="https://github.com/youcefchergui/minha.com/raw/refs/heads/main/SnapInsta.to_AQNy053nmvIds0odpnJ98Z3mdcEtQ6yxkcMmEfyNag4JkvWaLHzVX5bGakfFuDjYFbPBOEbZjT8UtnKYP5OXTm9Ke63v6HhyGk_SIT0.mp4" type="video/mp4">
-        متصفحك لا يدعم وسم الفيديو.
-    </video>
+    <iframe 
+        id="youtube-iframe" 
+        src="[ضع هنا رابط تضمين يوتيوب مع تشغيل تلقائي وميزات تحكم مخفية]" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+    </iframe>
 
     <div id="video-overlay">
-        <a id="continue-button" href="https://www.facebook.com/your-page-link" target="_blank">
+        <a id="continue-button" href="https://youcefcheria.github.io/Youcef/" target="_blank">
             شاهد الباقي على فيسبوك
         </a>
     </div>
 </div>
 
 <script>
-    const video = document.getElementById('myVideo');
+    const iframe = document.getElementById('youtube-iframe');
     const overlay = document.getElementById('video-overlay');
 
-    const stopTime = 5; // يتوقف الفيديو بعد 5 ثواني
+    const stopTime = 5000; // 5 ثواني بالمللي ثانية
     
-    // **** يرجى تغيير رابط فيسبوك هنا أيضاً ****
-    const destinationURL = "https://www.facebook.com/your-page-link"; 
-
-    video.play().catch(error => {
-        console.log("التشغيل التلقائي قد يكون محظورًا.");
-    });
-
-    video.addEventListener('timeupdate', function() {
-        if (video.currentTime >= stopTime) {
-            video.pause();
-            overlay.style.display = 'flex';
-            video.removeEventListener('timeupdate', arguments.callee);
-        }
-    });
-    
-    document.getElementById('continue-button').href = destinationURL;
+    // إظهار التراكب بعد 5 ثواني
+    setTimeout(() => {
+        // نوقف الفيديو بتغيير مصدر الـ iframe إلى شيء فارغ أو غير فعال
+        iframe.src = 'about:blank'; 
+        overlay.style.display = 'flex'; 
+    }, stopTime);
 </script>
 
 </body>
